@@ -17,8 +17,22 @@ sudo cp -r "$TMP/zen" /opt/
 echo "Adding 'zen' to be linked..."
 sudo ln -sf /opt/zen/zen /usr/local/bin/zen
 
-echo "Creating desktop shortcut..."
+echo "Creating app shortcut..."
 sudo tee /usr/share/applications/zen-browser.desktop > /dev/null <<EOF
+[Desktop Entry]
+Name=Zen Browser
+Comment=Experience tranquil browsing
+Exec=/opt/zen/zen
+Icon=/opt/zen/browser/chrome/icons/default/default128.png
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupWMClass=zen
+EOF
+
+echo "Creating desktop shortcut..."
+sudo tee ~/Desktop/zen-browser.desktop > /dev/null <<EOF
 [Desktop Entry]
 Name=Zen Browser
 Comment=Experience tranquil browsing
