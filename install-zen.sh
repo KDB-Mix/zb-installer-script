@@ -21,7 +21,7 @@ echo "Creating app shortcut..."
 sudo tee /usr/share/applications/zen-browser.desktop > /dev/null <<EOF
 [Desktop Entry]
 Name=Zen Browser
-Comment=Experience tranquil browsing
+Comment= Beautifully designed, privacy-focused, and packed with features.
 Exec=/opt/zen/zen
 Icon=/opt/zen/browser/chrome/icons/default/default128.png
 Terminal=false
@@ -35,7 +35,7 @@ echo "Creating desktop shortcut..."
 sudo tee ~/Desktop/zen-browser.desktop > /dev/null <<EOF
 [Desktop Entry]
 Name=Zen Browser
-Comment=Experience tranquil browsing
+Comment=Beautifully designed, privacy-focused, and packed with features.
 Exec=/opt/zen/zen
 Icon=/opt/zen/browser/chrome/icons/default/default128.png
 Terminal=false
