@@ -11,10 +11,13 @@ curl -L "https://github.com/zen-browser/desktop/releases/latest/download/zen.lin
 echo "Extracting..."
 tar -xf "$TMP/zen.tar.xz" -C "$TMP"
 
-echo "Installing to /opt/zen..."
+echo "Installing to /opt/zen/..."
 sudo cp -r "$TMP/zen" /opt/
 
-echo "Creating desktop entry..."
+echo "Adding 'zen' to be linked..."
+sudo ln -sf /opt/zen/zen /usr/local/bin/zen
+
+echo "Creating desktop shortcut..."
 sudo tee /usr/share/applications/zen-browser.desktop > /dev/null <<EOF
 [Desktop Entry]
 Name=Zen Browser
