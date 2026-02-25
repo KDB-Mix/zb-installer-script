@@ -1,4 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bash
+
+read -p "you sure?" yes
+echo "Ok, gonna do what you said"
 set -e
 
 TMP=$(mktemp -d)
